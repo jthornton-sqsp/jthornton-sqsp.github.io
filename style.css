@@ -121,6 +121,10 @@ img {
 	width: calc(var(--width) * 1px);
 }
 
+.lava-lamp__lava {
+	filter: url("#goo");
+}
+
 .lava-lamp__lava svg {
 	height: 280px;
 	width: 150px;
