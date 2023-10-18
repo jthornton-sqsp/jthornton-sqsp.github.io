@@ -12,7 +12,7 @@ body {
 	width: 100vw;
 	height: 100vh;
 	position: relative;
-	overflow-x: hidden;
+	overflow-x: hidden; 
 }
 
 .title {
@@ -30,15 +30,6 @@ body {
 	position: absolute;
 	right: 50px;
 	top: 50px;
-}
-
-img {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(69.5%, 26%);
-	opacity: 0.2;
-	height: 1300px;
 }
 
 .lava-lamp {
@@ -62,7 +53,7 @@ img {
 	opacity: 0.5;
 }
 
-.lava-lamp::before {
+/*.lava-lamp::before {
 	content: '';
 	height: 25%;
 	width: 300%;
@@ -74,7 +65,7 @@ img {
 	transform: translate(-50%, 0);
 	opacity: 0.5;
 	filter: blur(10px);
-}
+}*/
 
 .lava-lamp__main {
 	border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
@@ -146,10 +137,11 @@ img {
 
 .blob {
 	/* duration, timing function, delay, iteration-count, direction, custom animation */
-	animation: calc(var(--duration) * 1s) linear calc(var(--delay) * 1s) infinite var(--direction) floater;
-
-	/*animation: calc(var(--duration) * 1s) linear calc(var(--delay) * 1s) infinite var(--direction) floater,
-		calc(var(--duration) * 1s) linear calc(var(--delay) * 1s) infinite var(--direction) jiggle;*/
+	animation: floater calc(var(--duration) * 1s) linear calc(var(--delay) * 1s) infinite var(--direction),
+		jiggle 1s;
+/*
+	animation: calc(var(--duration) * 1s) linear calc(var(--delay) * 1s) infinite var(--direction) floater,
+		calc(var(--duration) * 0.1s) linear calc(var(--delay) * 1s) infinite var(--direction) jiggle;*/
 
 
 
@@ -175,19 +167,31 @@ img {
 
 @keyframes floater {
 	0% {
-		transform: skew(calc(var(--skewX) * 1deg), calc(var(--skewY) * 1deg)) translate(0, 0);
+		transform: skew(calc(var(--skewX) * 1deg), calc(var(--skewY) * 1deg));
+	}
+	5% {
+		transform: skew(calc(var(--skewX) * -3deg), calc(var(--skewY) * -1deg));
+	}
+	10% {
+		transform: skew(calc(var(--skewX) * 1deg), calc(var(--skewY) * 3deg));
+	}
+	15% {
+		transform: skew(calc(var(--skewX) * -1deg), calc(var(--skewY) * -1deg));
+	}
+	20% {
+		transform: skew(calc(var(--skewX) * 1deg), calc(var(--skewY) * 2deg));
 	}
 	100% {
-		transform: skew(calc(var(--skewX) * 1deg), calc(var(--skewY) * 1deg)) translate(0, calc((400 + (var(--height) * 2)) * -1px));
+		transform: translate(0, calc((400 + (var(--height) * 2)) * -1px)) skew(calc(var(--skewX) * -1deg), calc(var(--skewY) * -1deg));
 	}
 }
 
 @keyframes jiggle {
 	0% {
-		transform: skew(calc(var(--skewX) * 1deg), calc(var(--skewY) * 1deg));
+		transform: ;
 	}
 	100%
 	{
-		transform: skew(calc(var(--skewX) * -1deg), calc(var(--skewY) * -1deg));
+		transform: ;
 	}
 }
