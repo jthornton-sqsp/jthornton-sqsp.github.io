@@ -127,7 +127,7 @@ body {
 }
 
 .lava-lamp__lava {
-	filter: url("#goo");
+	filter: url("#lava");
 }
 
 .lava-lamp__lava svg {
