@@ -10,7 +10,7 @@
 		}
 
 		body {
-			background: url("brick.webp");
+/*			background: url("../i-lava-lamp/brick.webp");*/
 			min-height: 100vh;
 			margin: 0;
 		}
@@ -20,6 +20,18 @@
 			height: 100vh;
 			position: relative;
 			overflow-x: hidden; 
+		}
+
+
+
+		.explanation {
+			color: #111;
+			font-size: 28px;
+			font-family: 'Andale Mono';
+			position: absolute;
+			width: 800px;
+			top: 50px;
+			left: 50px;	
 		}
 
 		.title {
@@ -45,7 +57,7 @@
 			position: relative;
 		}
 
-
+/*
 		.lava-lamp::after {
 			content: '';
 			height: 500px;
@@ -59,7 +71,7 @@
 			filter: blur(10px);
 			opacity: 0.5;
 		}
-
+*/
 		/*.lava-lamp::before {
 			content: '';
 			height: 25%;
@@ -103,7 +115,7 @@
 		}
 
 		.lava-lamp__glass {
-			background: radial-gradient(circle at 50% 50%, #3a539b 25%, #19b5fe);
+			background: #19b5fe;
 			border-radius: 50%/10%;
 			overflow: hidden;
 			height: 70%;
@@ -206,28 +218,14 @@
 </head>
 <body>
 	<div class="scene">
-		<h1 class="title">I lava lamp</h1>
+		<div class="explanation">
+			overflow: hidden;
+		</div>
 		<div class="lamp-container">
 		<div class="lava-lamp" style="--height: 400; --width: 150">
 			<div class="lava-lamp__main">
 				<div class="lava-lamp__glass">
-					<div class="lava-lamp__lava">
-						<svg>
-							<ellipse class="blob blob--top" cx="35" cy="0" rx="35" ry="10"></ellipse>
-							<ellipse class="blob blob--bottom" cx="75" cy="270" rx="75" ry="10"></ellipse>
-							<circle class="blob" r="21" cx="46" cy="400" style="--skewX: -4; --skewY: 5; --height: 43; --duration: 30; --delay: -4; --direction: alternate;"></circle>
-							<circle class="blob" r="40" cx="99" cy="400" style="--skewX: -4; --skewY: -5; --height: 80; --duration: 38; --delay: 14; --direction: alternate;"></circle>
-							<<circle class="blob" r="33" cx="67" cy="400" style="--skewX: 2; --skewY: 3; --height: 67; --duration: 37; --delay: -2; --direction: alternate;"></circle>
-							<circle class="blob" r="18" cx="103" cy="400" style="--skewX: 0; --skewY: 0; --height: 36; --duration: 41; --delay: -5; --direction: alternate;"></circle>
-
-							<ellipse class="blob blob--top" cx="35" cy="0" rx="35" ry="10"></ellipse>
-							<ellipse class="blob blob--bottom" cx="75" cy="270" rx="75" ry="10"></ellipse>
-							<circle class="blob" r="41" cx="47" cy="400" style="--skewX: 4; --skewY: 1; --height: 83; --duration: 59; --delay: -1; --direction: alternate-reverse;"></circle>
-							<circle class="blob" r="36" cx="39" cy="400" style="--skewX: 3; --skewY: -3; --height: 72; --duration: 30; --delay: -6; --direction: alternate;"></circle>
-
-							<circle class="blob" r="40" cx="104" cy="400" style="--skewX: -4; --skewY: 0; --height: 80; --duration: 50; --delay: -10; --direction: alternate;"></circle>
-						</svg>
-					</div>
+					
 				</div>
 			</div>
 			<div class="lava-lamp__base"></div>

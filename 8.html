@@ -10,7 +10,7 @@
 		}
 
 		body {
-			background: url("brick.webp");
+/*			background: url("../i-lava-lamp/brick.webp");*/
 			min-height: 100vh;
 			margin: 0;
 		}
@@ -20,6 +20,16 @@
 			height: 100vh;
 			position: relative;
 			overflow-x: hidden; 
+		}
+
+		.explanation {
+			color: #111;
+			font-size: 18px;
+			font-family: 'Andale Mono';
+			position: absolute;
+			width: 800px;
+			top: 50px;
+			left: 50px;	
 		}
 
 		.title {
@@ -206,7 +216,16 @@
 </head>
 <body>
 	<div class="scene">
-		<h1 class="title">I lava lamp</h1>
+		<pre class="explanation">
+&lt;svg&gt;
+	&lt;defs&gt;
+		&lt;filter id=&quot;lava&quot;&gt;
+			&lt;feGaussianBlur in=&quot;SourceGraphic&quot; stdDeviation=&quot;10&quot; result=&quot;blur&quot; /&gt;
+			&lt;feColorMatrix in=&quot;blur&quot; mode=&quot;matrix&quot; values=&quot;1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7&quot; result=&quot;lava&quot; /&gt;
+		&lt;/filter&gt;
+	&lt;/defs&gt;
+&lt;/svg&gt;
+		</pre>
 		<div class="lamp-container">
 		<div class="lava-lamp" style="--height: 400; --width: 150">
 			<div class="lava-lamp__main">

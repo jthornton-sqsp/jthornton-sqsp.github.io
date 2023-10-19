@@ -10,7 +10,7 @@
 		}
 
 		body {
-			background: url("brick.webp");
+/*			background: url("../i-lava-lamp/brick.webp");*/
 			min-height: 100vh;
 			margin: 0;
 		}
@@ -19,7 +19,17 @@
 			width: 100vw;
 			height: 100vh;
 			position: relative;
-			overflow-x: hidden; 
+/*			overflow-x: hidden; */
+		}
+
+		.explanation {
+			color: #111;
+			font-size: 28px;
+			font-family: 'Andale Mono';
+			position: absolute;
+			width: 800px;
+			top: 50px;
+			left: 50px;	
 		}
 
 		.title {
@@ -51,7 +61,7 @@
 			height: 500px;
 			width: 500px;
 			position: absolute;
-			background: radial-gradient(circle at 50% 50%, #19b5fe, transparent 60%);
+/*			background: radial-gradient(circle at 50% 50%, #19b5fe, transparent 60%);*/
 			top: 45%;
 			left: 50%;
 			z-index: 4;
@@ -79,8 +89,9 @@
 			width: 100%;
 			height: 100%;
 			position: relative;
-			overflow: hidden;
+/*			overflow: hidden;*/
 			z-index: 2;
+			border: 1px solid red;
 		}
 
 		.lava-lamp__main::after,
@@ -103,9 +114,9 @@
 		}
 
 		.lava-lamp__glass {
-			background: radial-gradient(circle at 50% 50%, #3a539b 25%, #19b5fe);
+/*			background: #19b5fe;*/
 			border-radius: 50%/10%;
-			overflow: hidden;
+/*			overflow: hidden;*/
 			height: 70%;
 			left: 0;
 			position: absolute;
@@ -119,7 +130,7 @@
 			width: 100%;
 			position: absolute;
 			bottom: 0;
-			overflow: hidden;
+/*			overflow: hidden;*/
 			border-radius: 0 0 50% 50%/0 0 35% 35%;
 		}
 
@@ -206,12 +217,14 @@
 </head>
 <body>
 	<div class="scene">
-		<h1 class="title">I lava lamp</h1>
+		<div class="explanation">
+			border-radius: 0 0 50% 50%/0 0 35% 35%;
+		</div>
 		<div class="lamp-container">
 		<div class="lava-lamp" style="--height: 400; --width: 150">
 			<div class="lava-lamp__main">
 				<div class="lava-lamp__glass">
-					<div class="lava-lamp__lava">
+					<!-- <div class="lava-lamp__lava">
 						<svg>
 							<ellipse class="blob blob--top" cx="35" cy="0" rx="35" ry="10"></ellipse>
 							<ellipse class="blob blob--bottom" cx="75" cy="270" rx="75" ry="10"></ellipse>
@@ -227,7 +240,7 @@
 
 							<circle class="blob" r="40" cx="104" cy="400" style="--skewX: -4; --skewY: 0; --height: 80; --duration: 50; --delay: -10; --direction: alternate;"></circle>
 						</svg>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<div class="lava-lamp__base"></div>

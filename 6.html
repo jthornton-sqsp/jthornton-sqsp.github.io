@@ -10,9 +10,19 @@
 		}
 
 		body {
-			background: url("brick.webp");
+/*			background: url("../i-lava-lamp/brick.webp");*/
 			min-height: 100vh;
 			margin: 0;
+		}
+
+		.explanation {
+			color: #111;
+			font-size: 18px;
+			font-family: 'Andale Mono';
+			position: absolute;
+			width: 800px;
+			top: 50px;
+			left: 50px;	
 		}
 
 		.scene {
@@ -206,7 +216,12 @@
 </head>
 <body>
 	<div class="scene">
-		<h1 class="title">I lava lamp</h1>
+		<pre class="explanation">
+&lt;circle class="blob" r="21" cx="46" cy="400" style="--skewX: -4; --skewY: 5; --height: 43; --duration: 30; --delay: -4; --direction: alternate;"&gt;&lt;/circle&gt;
+&lt;circle class="blob" r="21" cx="46" cy="400" style="--skewX: 4; --skewY: 1; --height: 83; --duration: 59; --delay: -1; --direction: alternate-reverse;"&gt;&lt;/circle&gt;
+
+animation: floater calc(var(--duration) * 1s) linear calc(var(--delay) * 1s) infinite var(--direction),
+		</pre>
 		<div class="lamp-container">
 		<div class="lava-lamp" style="--height: 400; --width: 150">
 			<div class="lava-lamp__main">
@@ -233,13 +248,13 @@
 			<div class="lava-lamp__base"></div>
 		</div>
 		<svg>
-			<defs>
+			<!-- <defs>
 				<filter id="lava">
 					<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
 					<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="lava" />
 					<feBlend in="SourceGraphic" in2="lava" />
 				</filter>
-			</defs>
+			</defs> -->
 		</svg>
 	</div>
 	</div>
